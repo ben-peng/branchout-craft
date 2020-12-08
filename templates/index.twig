@@ -1,0 +1,138 @@
+{% extends "_layouts/main" %} {% block main %}
+
+<section class="hero-wrapper">
+  <div class="hero-carousel">
+    <div class="hero-activities tc">
+      <h1 class="hero-titles">
+        <a
+          href="{{ siteUrl }}{{ activities.name | replace({
+          Immersive : '',
+       }) | spaceless | kebab }}"
+          >{{ activities.name }}</a
+        >
+      </h1>
+    </div>
+    <div class="hero-places tc">
+      <h1 class="hero-titles">
+        <a
+          href="{{ siteUrl }}{{ places.name | replace({
+          Incredible : '',
+       }) | spaceless | kebab }}"
+          >{{ places.name }}</a
+        >
+      </h1>
+    </div>
+    <div class="hero-packages tc">
+      <h1 class="hero-titles">
+        <a
+          href="{{ siteUrl }}{{ packages.name | replace({
+          Curated : '',
+       }) | spaceless | kebab }}"
+          >{{ packages.name }}</a
+        >
+      </h1>
+    </div>
+  </div>
+  <div class="carousel-indicators none-l">
+    <div class="carousel-indicator carousel-indicator-current"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+  </div>
+</section>
+
+<section class="bio-wrapper">
+  <div class="bio-content fade">
+    <h2>{{ entry.bioHeadline }}</h2>
+    {{ entry.bioCopy }}
+  </div>
+  <div class="bio-images-wrapper">
+    <div class="bio-images">
+      {% set homeBioimages =
+      craft.assets().volume('homeBioImages').kind('image').orderBy('dateCreated asc') %} {% for
+      image in homeBioimages %}
+      <div class="bio-image"><img src="{{ image.getUrl }}" /></div>
+      {% endfor %}
+      <img src="./src/img/branchout-badge.svg" class="stamp stamp-small" />
+    </div>
+  </div>
+</section>
+
+<section class="icons-wrapper tc">
+  <div class="icons fade">
+    <div class="icons-carousel">
+      <div class="icon-group">
+        <img src="./src/img/branchout-icon1.svg" class="icon" />
+        <h3 class="icon-copy">Intimate <br /><span>Groups</span></h3>
+      </div>
+      <div class="icon-group">
+        <img src="./src/img/branchout-icon2.svg" class="icon" />
+        <h3 class="icon-copy">Premium <br /><span>Accommodation</span></h3>
+      </div>
+      <div class="icon-group">
+        <img src="./src/img/branchout-icon3.svg" class="icon" />
+        <h3 class="icon-copy">
+          Luxury <br /><span>Experiences in</span> <br /><span>Local Communities</span>
+        </h3>
+      </div>
+      <div class="icon-group">
+        <img src="./src/img/branchout-icon4.svg" class="icon" />
+        <h3 class="icon-copy">VIP <br /><span>Options</span></h3>
+      </div>
+      <div class="icon-group">
+        <img src="./src/img/branchout-icon5.svg" class="icon" />
+        <h3 class="icon-copy">Local Guides, <br /><span>Real Connections</span></h3>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-indicators none-l">
+    <div class="carousel-indicator carousel-indicator-current"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+  </div>
+</section>
+
+<section class="tours-packages-wrapper">
+  <div class="tours-packages-headline fade">
+    <h5 class="underline">Section A</h5>
+    <h2>Tours & Packages</h2>
+  </div>
+
+  <div class="tours-wrapper fade">
+    <div class="tours">
+      {% set toursPackages = craft.entries() .section(['activities', 'packages', 'places'])
+      .orderBy('postDate asc') .limit(6) %} {% set entries = toursPackages.all() %} {% for entry in
+      entries %}
+
+      <div class="tour">
+        <img src="{{ entry.image.one().url }}" />
+        <div class="tour-titleblock">
+          <h5>{{ entry.duration }}</h5>
+          <h1>{{ entry.title }}</h1>
+          <a href="{{ entry.url }}" class="button"
+            >Explore Details <img class="button-arrow-r" src="/src/img/arrow-r.svg"
+          /></a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="carousel-indicators none-s">
+    <div class="carousel-indicator carousel-indicator-current"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+    <div class="carousel-indicator"></div>
+  </div>
+</section>
+
+<section class="call-to-action tc fade">
+  <h2>{{ entry.callToActionHeadline }}</h2>
+  {{ entry.callToActionCopy }}
+  <img src="/src/img/branchout-badge-red.svg" class="stamp stamp-large" />
+</section>
+
+{% endblock %}

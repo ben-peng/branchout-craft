@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <head>
+    <title> Branch Out / Small Groups, Big Adventures </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel='icon' type='image/x-icon' href='{{ craft.rebrand.icon.url }}' />
+  </head>
+
+  <body>
+    <header>
+        <div class="menu-buttons none-l">
+          <a href="" class="menu-button"><span>—</span><span>—</span> <span>Menu</span></a>
+        </div>
+
+        {% set activities = craft.sections.getSectionByHandle('activities') %}
+        {% set places = craft.sections.getSectionByHandle('places') %}
+        {% set packages = craft.sections.getSectionByHandle('packages') %}
+
+        <nav class="menu-l">
+          <a href="{{ siteUrl }}{{ activities.name | replace({
+             Immersive : '',
+          }) | spaceless | kebab }}">  {{ activities.name | replace({
+            Immersive: '',
+          })}}</a>
+          <a href="{{ siteUrl }}{{ places.name | replace({
+            Incredible : '',
+         }) | spaceless | kebab }}">{{ places.name | replace({
+            Incredible: '',
+          })}}</a>
+          <a href="{{ siteUrl }}{{ packages.name | replace({
+            Curated : '',
+         }) | spaceless | kebab }}">{{ packages.name | replace({
+            Curated: '',
+          })}}</a>
+        </nav>
+
+        <img class="logo" src="./src/img/branchout-logo.svg">
+
+        {% set about = craft.sections.getSectionByHandle('about') %}
+        {% set faq = craft.sections.getSectionByHandle('faq') %}
+        {% set blog = craft.sections.getSectionByHandle('blog') %}
+        {% set contact = craft.sections.getSectionByHandle('contact') %}
+
+        <nav class="menu-r">
+          <a href="{{ siteUrl }}{{ about.name | replace({
+            Us : '',
+         }) | spaceless | kebab }}">{{about.name}}</a>
+          <a href="{{ siteUrl }}{{ faq.name | kebab }}">{{faq.name}}</a>
+          <a href="{{ siteUrl }}{{ blog.name | kebab }}">{{blog.name}}</a>
+          <a href="{{ siteUrl }}{{ contact.name | kebab }}">{{contact.name}}</a>
+        </nav>
+        <div class="social-icons none-l">
+          <a href="#"><img class="social-icon" src="./src/img/facebook-icon.svg"></a>
+          <a href="#"><img class="social-icon" src="./src/img/twitter-icon.svg"></a>
+          <a href="#"><img class="social-icon" src="./src/img/instagram-icon.svg"></a>
+        </div>
+    </header>
+
+    {% block main %}
+    {% endblock %}
+
+    <footer>
+      <div class="divider"></div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <a href="tel:0413941209">Contact Us</a>
+          <div>
+            <a href="">Instagram</a> / <a href="">Facebook</a>
+          </div>
+          <a href="mailto:benjamin.w.peng@gmail.com">Email Us</a>
+      </div>
+      <img class="logo" src="./src/img/branchout-logo.svg">
+        <div class="footer-address">
+          <p>Level 1, 387 Clarendon Street</p>
+          <p>South Melbourne</p>
+          <p>VIC, 3205 AUS</p>
+        </div>
+      </div>
+
+      <h5 class="copyright tc">&copy; <span class="copyright-year">2020</span> Branch Out<span>.</span> Website by <a href="http://spicyweb.com.au/" class="copy-link">Spicy Web</a></h5>
+    </footer>
+  </body>
+
+  <script src="/js/jquery-3.5.1.min.js"></script>
+  <script src="/js/in-view.min.js"></script>
+  <script src="/js/app.js"></script>
+</html>

@@ -1,0 +1,56 @@
+fieldLayouts:
+  7ca7928c-b18f-41d3-87a1-809af8b3dec5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0bf745c2-5c41-4df4-81cf-33a13515e486
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: c11fae3a-8676-4c2a-89cf-e921b08ee031
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: places
+hasTitleField: true
+name: Places
+section: 8536bd89-e3b7-4cef-9432-7e8de82ba22b
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

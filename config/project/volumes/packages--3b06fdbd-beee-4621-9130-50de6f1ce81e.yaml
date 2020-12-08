@@ -1,0 +1,38 @@
+fieldLayouts:
+  90411141-b097-4343-a719-36fbb2668b01:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: packages
+hasUrls: true
+name: Packages
+settings:
+  path: '@webroot/src/img/packages'
+sortOrder: 3
+type: craft\volumes\Local
+url: '@web/src/img/packages'

@@ -1,0 +1,38 @@
+fieldLayouts:
+  25a8c41b-a97d-4ddf-948d-3dc60c8ca6bc:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: activities
+hasUrls: true
+name: Activities
+settings:
+  path: '@webroot/src/img/activities'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@web/src/img/activities'

@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 913789bc-4f50-49fa-82ff-0b8e15cd5162
+handle: duration
+instructions: ''
+name: Duration
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

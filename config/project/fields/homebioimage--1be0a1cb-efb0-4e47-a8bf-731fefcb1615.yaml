@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: eb5bd566-3f23-4b68-9338-3d338db1bc94
+handle: homebioimage
+instructions: ''
+name: HomeBioImage
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: false
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:218f7c98-c6d5-445a-b400-5d267f954097'
+  defaultUploadLocationSubpath: ''
+  limit: '2'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:218f7c98-c6d5-445a-b400-5d267f954097'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:0a2c8a91-1339-4b4d-8636-88471a148fd4'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

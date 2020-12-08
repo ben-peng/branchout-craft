@@ -1,0 +1,26 @@
+{
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link",
+    "image",
+    "video"
+  ],
+  "plugins": ["fullscreen", "video"],
+  "linkNewTab": true,
+  "toolbarFixed": true,
+  "formattingAdd": {
+    "indent": {
+      "title": "Indent",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p",
+        "class": "indent"
+      }
+    }
+  }
+}

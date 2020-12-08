@@ -1,0 +1,35 @@
+dateModified: 1607432543
+email:
+  fromEmail: benjamin.w.peng@gmail.com
+  fromName: 'Crafty Coffee'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.3.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  scss:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Branch Out'
+  retryDuration: null
+  schemaVersion: 3.5.13
+  timeZone: Australia/Melbourne
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,9 @@
+baseUrl: 'http://$PRIMARY_SITE_URL'
+enabled: true
+handle: default
+hasUrls: true
+language: en-AU
+name: 'Branch Out'
+primary: true
+siteGroup: 26af17d2-b440-45ab-a4e7-64def23fa687
+sortOrder: 1
